@@ -15,6 +15,7 @@
 		AC6B57752429377400683B47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6B57742429377400683B47 /* Assets.xcassets */; };
 		AC6B57782429377400683B47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6B57762429377400683B47 /* LaunchScreen.storyboard */; };
 		AC6B5780242938F800683B47 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC6B577F242938F800683B47 /* GoogleService-Info.plist */; };
+		ACA3B43E242C13320067AB5E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA3B43D242C13320067AB5E /* Constants.swift */; };
 		ACE9017B24296EF600655163 /* AddThoughtVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9017A24296EF600655163 /* AddThoughtVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		AC6B57772429377400683B47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC6B57792429377400683B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC6B577F242938F800683B47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ACA3B43D242C13320067AB5E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ACE9017A24296EF600655163 /* AddThoughtVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtVC.swift; sourceTree = "<group>"; };
 		E74D0C26031F5E9DCB811C37 /* Pods-RNDM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNDM.release.xcconfig"; path = "Target Support Files/Pods-RNDM/Pods-RNDM.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +78,7 @@
 		AC6B576A2429377300683B47 /* RNDM */ = {
 			isa = PBXGroup;
 			children = (
+				ACA3B43C242C131E0067AB5E /* Utilities */,
 				ACE9017E24296F0C00655163 /* Model */,
 				ACE9017D24296F0500655163 /* View */,
 				ACE9017C24296EFB00655163 /* Controller */,
@@ -88,6 +91,14 @@
 				AC6B57792429377400683B47 /* Info.plist */,
 			);
 			path = RNDM;
+			sourceTree = "<group>";
+		};
+		ACA3B43C242C131E0067AB5E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				ACA3B43D242C13320067AB5E /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		ACE9017C24296EFB00655163 /* Controller */ = {
@@ -237,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACA3B43E242C13320067AB5E /* Constants.swift in Sources */,
 				AC6B57702429377300683B47 /* MainVC.swift in Sources */,
 				AC6B576C2429377300683B47 /* AppDelegate.swift in Sources */,
 				ACE9017B24296EF600655163 /* AddThoughtVC.swift in Sources */,
