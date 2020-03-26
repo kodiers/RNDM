@@ -16,6 +16,8 @@
 		AC6B57782429377400683B47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6B57762429377400683B47 /* LaunchScreen.storyboard */; };
 		AC6B5780242938F800683B47 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC6B577F242938F800683B47 /* GoogleService-Info.plist */; };
 		ACA3B43E242C13320067AB5E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA3B43D242C13320067AB5E /* Constants.swift */; };
+		ACD77620242D5BA900718E80 /* Thought.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD7761F242D5BA900718E80 /* Thought.swift */; };
+		ACD77622242D5D2500718E80 /* ThoughtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD77621242D5D2500718E80 /* ThoughtCell.swift */; };
 		ACE9017B24296EF600655163 /* AddThoughtVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9017A24296EF600655163 /* AddThoughtVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		AC6B57792429377400683B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC6B577F242938F800683B47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ACA3B43D242C13320067AB5E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ACD7761F242D5BA900718E80 /* Thought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thought.swift; sourceTree = "<group>"; };
+		ACD77621242D5D2500718E80 /* ThoughtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtCell.swift; sourceTree = "<group>"; };
 		ACE9017A24296EF600655163 /* AddThoughtVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtVC.swift; sourceTree = "<group>"; };
 		E74D0C26031F5E9DCB811C37 /* Pods-RNDM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNDM.release.xcconfig"; path = "Target Support Files/Pods-RNDM/Pods-RNDM.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +117,7 @@
 		ACE9017D24296F0500655163 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ACD77621242D5D2500718E80 /* ThoughtCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 		ACE9017E24296F0C00655163 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ACD7761F242D5BA900718E80 /* Thought.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -251,7 +257,9 @@
 				ACA3B43E242C13320067AB5E /* Constants.swift in Sources */,
 				AC6B57702429377300683B47 /* MainVC.swift in Sources */,
 				AC6B576C2429377300683B47 /* AppDelegate.swift in Sources */,
+				ACD77620242D5BA900718E80 /* Thought.swift in Sources */,
 				ACE9017B24296EF600655163 /* AddThoughtVC.swift in Sources */,
+				ACD77622242D5D2500718E80 /* ThoughtCell.swift in Sources */,
 				AC6B576E2429377300683B47 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
