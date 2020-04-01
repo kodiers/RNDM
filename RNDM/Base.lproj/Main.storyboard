@@ -119,6 +119,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="RNDM" id="5aw-zI-it0">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="TiA-vA-BaF">
+                            <connections>
+                                <action selector="logoutTapped:" destination="BYZ-38-t0r" id="QHH-CN-igm"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="addThoughtIcon" id="Pay-H3-cnh">
                             <connections>
                                 <segue destination="pPL-Ng-fch" kind="show" id="hmg-7f-f9T"/>
@@ -221,7 +226,7 @@
         <!--LoginVC-->
         <scene sceneID="SRy-Gg-VbT">
             <objects>
-                <viewController id="g7G-2J-oyO" customClass="LoginVC" customModule="RNDM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" modalPresentationStyle="fullScreen" id="g7G-2J-oyO" customClass="LoginVC" customModule="RNDM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cMb-LE-cXs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -273,7 +278,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="createUserTapped:" destination="g7G-2J-oyO" eventType="touchUpInside" id="KMU-IP-9ds"/>
+                                    <segue destination="ln1-JP-9AG" kind="show" id="KDP-RL-UgB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmh-Y1-BCI">
@@ -314,7 +319,7 @@
         <!--Create UserVC-->
         <scene sceneID="Ry4-m1-MD3">
             <objects>
-                <viewController id="ln1-JP-9AG" customClass="CreateUserVC" customModule="RNDM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ln1-JP-9AG" customClass="CreateUserVC" customModule="RNDM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HyF-uS-3Jv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -400,6 +405,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CXv-g6-0GI"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ifN-Hu-N0o"/>
                     <connections>
                         <outlet property="cancelBtn" destination="xww-uV-bgk" id="2Xp-ty-1me"/>
                         <outlet property="createBtn" destination="PRR-bt-Apt" id="nDS-oK-X1D"/>

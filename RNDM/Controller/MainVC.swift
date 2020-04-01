@@ -25,6 +25,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     private var thoughtsCollectionRef: CollectionReference!
     private var thoughtsListener: ListenerRegistration!
     private var selectedCategory = ThoughtCategory.funny.rawValue
+    private var handle: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +38,22 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setListener()
+        handle = Auth.auth().addStateDidChangeListener({ (auth, user) in
+            if user == nil {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let loginVC = storyboard.instantiateViewController(identifier: "loginVC")
+                self.present(loginVC, animated: true, completion: nil)
+            } else {
+                self.setListener()
+            }
+        })
         super.viewWillAppear(animated)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        thoughtsListener.remove()
+        if thoughtsListener != nil {
+            thoughtsListener.remove()
+        }
         super.viewWillDisappear(animated)
     }
     
@@ -72,6 +83,15 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         thoughtsListener.remove()
         setListener()
+    }
+    
+    @IBAction func logoutTapped(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signotError as NSError {
+            debugPrint("Error sign out: \(signotError.localizedDescription)")
+        }
     }
     
     func setListener() {

@@ -10,5 +10,6 @@ target 'RNDM' do
   # https://firebase.google.com/docs/ios/setup#available-pods
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Auth'
 
 end
