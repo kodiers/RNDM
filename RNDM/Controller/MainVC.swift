@@ -57,6 +57,16 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.viewWillDisappear(animated)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toComments" {
+            if let destinationVC = segue.destination as? CommentsVC {
+                if let thought = sender as? Thought {
+                    destinationVC.thought = thought
+                }
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return thoughts.count
     }
@@ -67,6 +77,10 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             return cell
         }
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toComments", sender: thoughts[indexPath.row])
     }
 
     @IBAction func categoryChanged(_ sender: Any) {
