@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CommentsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -16,6 +17,10 @@ class CommentsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var thought: Thought!
     var comments = [Comment]()
+    var thoghtRef: DocumentReference!
+    let firestore = Firestore.firestore()
+    var username: String!
+    var commentListener: ListenerRegistration!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +28,27 @@ class CommentsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        thoghtRef = firestore.collection(THOUGHTS_REF).document(thought.documentId)
+        if let name = Auth.auth().currentUser?.displayName {
+            username = name
+        }
+        self.view.bindToKeyboard()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        commentListener = firestore.collection(THOUGHTS_REF).document(self.thought.documentId).collection(COMMENTS_REF).order(by: TIMESTAMP, descending: false).addSnapshotListener({ (snapshot, error) in
+            guard let snap = snapshot else {
+                debugPrint("Error fetching comments: \(String(describing: error?.localizedDescription))")
+                return
+            }
+            self.comments.removeAll()
+            self.comments = Comment.parseData(snapshot: snap)
+            self.tableView.reloadData()
+        })
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        commentListener.remove()
     }
     
 
@@ -49,5 +75,34 @@ class CommentsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 
     @IBAction func sendAddCommentTapped(_ sender: Any) {
+        guard let commentTxt = addCommentTxt.text else {
+            return
+        }
+        firestore.runTransaction({ (transaction, errorPointer) -> Any? in
+            let thoughtDocument: DocumentSnapshot
+            do {
+                try thoughtDocument = transaction.getDocument(Firestore.firestore().collection(THOUGHTS_REF).document(self.thought.documentId))
+                
+            } catch let error as NSError {
+                debugPrint("Fetch error: \(error.localizedDescription)")
+                return nil
+            }
+            guard let oldNumComments = thoughtDocument.data()![NUM_COMMENTS] as? Int else { return nil }
+            transaction.updateData([NUM_COMMENTS : oldNumComments + 1], forDocument: self.thoghtRef)
+            let newCommentRef = self.firestore.collection(THOUGHTS_REF).document(self.thought.documentId).collection(COMMENTS_REF).document()
+            transaction.setData([
+                COMMENT_TXT : commentTxt,
+                TIMESTAMP: FieldValue.serverTimestamp(),
+                USERNAME: self.username!
+            ], forDocument: newCommentRef)
+            return nil
+        }) { (object, error) in
+            if let err = error {
+                debugPrint("Transaction failed: \(err.localizedDescription)")
+            } else {
+                self.addCommentTxt.text = ""
+                self.addCommentTxt.resignFirstResponder()
+            }
+        }
     }
 }

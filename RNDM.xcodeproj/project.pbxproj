@@ -23,6 +23,7 @@
 		ACA3B43E242C13320067AB5E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA3B43D242C13320067AB5E /* Constants.swift */; };
 		ACD77620242D5BA900718E80 /* Thought.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD7761F242D5BA900718E80 /* Thought.swift */; };
 		ACD77622242D5D2500718E80 /* ThoughtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD77621242D5D2500718E80 /* ThoughtCell.swift */; };
+		ACD8EDC1243BE29400005986 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD8EDC0243BE29400005986 /* KeyboardBoundView.swift */; };
 		ACE9017B24296EF600655163 /* AddThoughtVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9017A24296EF600655163 /* AddThoughtVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		ACA3B43D242C13320067AB5E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ACD7761F242D5BA900718E80 /* Thought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thought.swift; sourceTree = "<group>"; };
 		ACD77621242D5D2500718E80 /* ThoughtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtCell.swift; sourceTree = "<group>"; };
+		ACD8EDC0243BE29400005986 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		ACE9017A24296EF600655163 /* AddThoughtVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtVC.swift; sourceTree = "<group>"; };
 		E74D0C26031F5E9DCB811C37 /* Pods-RNDM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNDM.release.xcconfig"; path = "Target Support Files/Pods-RNDM/Pods-RNDM.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				ACA3B43D242C13320067AB5E /* Constants.swift */,
+				ACD8EDC0243BE29400005986 /* KeyboardBoundView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				AC6B57702429377300683B47 /* MainVC.swift in Sources */,
 				AC9A345B2433FA7D008F59CC /* LoginVC.swift in Sources */,
 				AC5409E8243697CD001F41A4 /* CommentCell.swift in Sources */,
+				ACD8EDC1243BE29400005986 /* KeyboardBoundView.swift in Sources */,
 				AC6B576C2429377300683B47 /* AppDelegate.swift in Sources */,
 				AC5409E624369464001F41A4 /* CommentsVC.swift in Sources */,
 				ACD77620242D5BA900718E80 /* Thought.swift in Sources */,
