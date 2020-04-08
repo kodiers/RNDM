@@ -221,6 +221,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="commentLbl" destination="PPH-zf-FgL" id="ytz-bi-cHC"/>
+                                            <outlet property="optionsMenu" destination="dmR-92-xq9" id="Wec-2L-05x"/>
                                             <outlet property="timestampLbl" destination="5sx-FH-QFU" id="xEm-ij-b6P"/>
                                             <outlet property="usernameLbl" destination="4Gg-Dl-iIX" id="obx-hp-McN"/>
                                         </connections>
