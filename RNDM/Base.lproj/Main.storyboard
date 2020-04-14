@@ -168,7 +168,7 @@
         <!--CommentsVC-->
         <scene sceneID="HBU-74-TeS">
             <objects>
-                <viewController id="2ju-Hr-cV2" customClass="CommentsVC" customModule="RNDM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="2ju-Hr-cV2" customClass="CommentsVC" customModule="RNDM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7SH-ig-hDS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -273,11 +273,65 @@
                         <outlet property="addCommentTxt" destination="erD-u3-YT4" id="xCL-ku-5lm"/>
                         <outlet property="keyboardView" destination="VjC-tw-F0S" id="WKE-ar-n5D"/>
                         <outlet property="tableView" destination="t7w-Dm-hZa" id="n7j-Mh-bBN"/>
+                        <segue destination="7S6-kL-gm7" kind="show" identifier="toEditComment" id="bsN-vD-dme"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TzS-2L-Fds" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1782.608695652174" y="432.58928571428572"/>
+        </scene>
+        <!--Update CommentVC-->
+        <scene sceneID="43r-i1-bu0">
+            <objects>
+                <viewController id="7S6-kL-gm7" customClass="UpdateCommentVC" customModule="RNDM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AeY-0K-biY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Kan-J0-wrm">
+                                <rect key="frame" x="20" y="108" width="374" height="150"/>
+                                <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Qqf-lf-9x5"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="up4-ju-RLK">
+                                <rect key="frame" x="144.5" y="274" width="125" height="40"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.50980392159999999" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0Kb-GF-GBR"/>
+                                    <constraint firstAttribute="width" constant="125" id="R60-4T-3EH"/>
+                                </constraints>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateTapped:" destination="7S6-kL-gm7" eventType="touchUpInside" id="tfs-c5-lGQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="up4-ju-RLK" firstAttribute="centerX" secondItem="AeY-0K-biY" secondAttribute="centerX" id="3pE-8R-0cU"/>
+                            <constraint firstItem="Kan-J0-wrm" firstAttribute="leading" secondItem="oYV-Tp-7ie" secondAttribute="leading" constant="20" id="FCN-iE-dgF"/>
+                            <constraint firstItem="up4-ju-RLK" firstAttribute="top" secondItem="Kan-J0-wrm" secondAttribute="bottom" constant="16" id="oxf-cK-SfB"/>
+                            <constraint firstItem="Kan-J0-wrm" firstAttribute="top" secondItem="oYV-Tp-7ie" secondAttribute="top" constant="20" id="u4F-jC-gWl"/>
+                            <constraint firstItem="oYV-Tp-7ie" firstAttribute="trailing" secondItem="Kan-J0-wrm" secondAttribute="trailing" constant="20" id="ytc-T6-HmB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oYV-Tp-7ie"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JyY-cu-SJh"/>
+                    <connections>
+                        <outlet property="commentTxt" destination="Kan-J0-wrm" id="2R5-SN-SdQ"/>
+                        <outlet property="updateBtn" destination="up4-ju-RLK" id="32u-J0-FlK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5mT-zr-s24" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2576.811594202899" y="429.91071428571428"/>
         </scene>
         <!--Add ThoughtVC-->
         <scene sceneID="dOA-IL-7Pl">

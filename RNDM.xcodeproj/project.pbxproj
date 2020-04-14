@@ -18,6 +18,7 @@
 		AC6B57752429377400683B47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6B57742429377400683B47 /* Assets.xcassets */; };
 		AC6B57782429377400683B47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6B57762429377400683B47 /* LaunchScreen.storyboard */; };
 		AC6B5780242938F800683B47 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC6B577F242938F800683B47 /* GoogleService-Info.plist */; };
+		AC71BFE6244672EE0019DF58 /* UpdateCommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71BFE5244672EE0019DF58 /* UpdateCommentVC.swift */; };
 		AC9A345B2433FA7D008F59CC /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A345A2433FA7D008F59CC /* LoginVC.swift */; };
 		AC9A345D2433FC40008F59CC /* CreateUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A345C2433FC40008F59CC /* CreateUserVC.swift */; };
 		ACA3B43E242C13320067AB5E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA3B43D242C13320067AB5E /* Constants.swift */; };
@@ -42,6 +43,7 @@
 		AC6B57772429377400683B47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC6B57792429377400683B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC6B577F242938F800683B47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AC71BFE5244672EE0019DF58 /* UpdateCommentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCommentVC.swift; sourceTree = "<group>"; };
 		AC9A345A2433FA7D008F59CC /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		AC9A345C2433FC40008F59CC /* CreateUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserVC.swift; sourceTree = "<group>"; };
 		ACA3B43D242C13320067AB5E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				AC9A345A2433FA7D008F59CC /* LoginVC.swift */,
 				AC9A345C2433FC40008F59CC /* CreateUserVC.swift */,
 				AC5409E524369464001F41A4 /* CommentsVC.swift */,
+				AC71BFE5244672EE0019DF58 /* UpdateCommentVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACA3B43E242C13320067AB5E /* Constants.swift in Sources */,
+				AC71BFE6244672EE0019DF58 /* UpdateCommentVC.swift in Sources */,
 				AC6B57702429377300683B47 /* MainVC.swift in Sources */,
 				AC9A345B2433FA7D008F59CC /* LoginVC.swift in Sources */,
 				AC5409E8243697CD001F41A4 /* CommentCell.swift in Sources */,
