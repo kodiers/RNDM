@@ -357,12 +357,6 @@
                                     <action selector="categoryChanged:" destination="pPL-Ng-fch" eventType="valueChanged" id="gXj-4B-ykS"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="shf-7a-W8n">
-                                <rect key="frame" x="20" y="148" width="374" height="21"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Test" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1G3-eT-YWR">
                                 <rect key="frame" x="20" y="181" width="374" height="100"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.15344071061643835" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -392,16 +386,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="EGu-gg-NSV" firstAttribute="trailing" secondItem="Z6L-2E-P4U" secondAttribute="trailing" constant="20" id="4xf-aS-LnJ"/>
-                            <constraint firstItem="shf-7a-W8n" firstAttribute="top" secondItem="Z6L-2E-P4U" secondAttribute="bottom" constant="12" id="9pj-E9-JkX"/>
                             <constraint firstItem="Z6L-2E-P4U" firstAttribute="leading" secondItem="EGu-gg-NSV" secondAttribute="leading" constant="20" id="ADy-lH-37L"/>
                             <constraint firstItem="1G3-eT-YWR" firstAttribute="leading" secondItem="EGu-gg-NSV" secondAttribute="leading" constant="20" id="G5F-QM-x77"/>
-                            <constraint firstItem="EGu-gg-NSV" firstAttribute="trailing" secondItem="shf-7a-W8n" secondAttribute="trailing" constant="20" id="GCb-94-yjs"/>
-                            <constraint firstItem="shf-7a-W8n" firstAttribute="leading" secondItem="EGu-gg-NSV" secondAttribute="leading" constant="20" id="J5Z-gR-BY0"/>
                             <constraint firstItem="9wu-gP-sSD" firstAttribute="centerX" secondItem="58w-hb-27W" secondAttribute="centerX" id="Tvf-3p-DQN"/>
                             <constraint firstItem="EGu-gg-NSV" firstAttribute="trailing" secondItem="1G3-eT-YWR" secondAttribute="trailing" constant="20" id="f5L-fD-39t"/>
-                            <constraint firstItem="1G3-eT-YWR" firstAttribute="top" secondItem="shf-7a-W8n" secondAttribute="bottom" constant="12" id="rN6-gY-S9v"/>
                             <constraint firstItem="9wu-gP-sSD" firstAttribute="top" secondItem="1G3-eT-YWR" secondAttribute="bottom" constant="8" id="vWk-8z-hCW"/>
                             <constraint firstItem="Z6L-2E-P4U" firstAttribute="top" secondItem="EGu-gg-NSV" secondAttribute="top" constant="16" id="wT1-R8-C8F"/>
+                            <constraint firstItem="1G3-eT-YWR" firstAttribute="top" secondItem="Z6L-2E-P4U" secondAttribute="bottom" constant="45" id="ydP-Gu-USn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EGu-gg-NSV"/>
                     </view>
@@ -410,7 +401,6 @@
                         <outlet property="categorySegment" destination="Z6L-2E-P4U" id="wib-WW-PUb"/>
                         <outlet property="postBtn" destination="9wu-gP-sSD" id="ZIe-DU-5PP"/>
                         <outlet property="thoughtTxt" destination="1G3-eT-YWR" id="vFA-Fs-esY"/>
-                        <outlet property="usernameTxt" destination="shf-7a-W8n" id="L3A-uC-AOr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQ7-it-ao0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
